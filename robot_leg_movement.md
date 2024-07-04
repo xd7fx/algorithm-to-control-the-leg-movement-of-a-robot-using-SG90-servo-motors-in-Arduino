@@ -1,51 +1,15 @@
-## Code Overview
+## Initialization
+Initialize the Servos:
+Connect the servos to the microcontroller.
+Set the initial positions of the servos to 90 degrees.
+Define Parameters:
 
-The Arduino code controls the movement of the robot's legs by rotating the hip and knee servos to predefined angles. The movement cycle consists of lifting the leg, swinging it forward, lowering it, and shifting the weight.
+stepLength is the length of each step (in degrees).
+footLiftHeight is the height of the foot lift (in degrees).
+movementSpeed is the speed of movement (in milliseconds).
 
-### Main Functions
 
-- `setup()`: Initializes the servo motors and sets their initial positions to 90 degrees.
-- `loop()`: Contains the main walking cycle, which includes lifting, swinging forward, lowering the leg, and shifting the weight.
-
-### Helper Functions
-
-- `incrementallyRotate(Servo servo, int fromAngle, int toAngle)`: Gradually rotates the servo from one angle to another.
-- `decrementAngle(Servo servo, int fromAngle, int toAngle)`: Decreases the servo angle gradually.
-- `incrementAngle(Servo servo, int fromAngle, int toAngle)`: Increases the servo angle gradually.
-- `maintainAngle(Servo servo, int angle)`: Keeps the servo at a specified angle.
-
-## Parameters
-
-- `stepLength`: The length of each step in degrees (default: 30).
-- `footLiftHeight`: The height of the foot lift in degrees (default: 60).
-- `movementSpeed`: The speed of movement in milliseconds (default: 50).
-
-## Usage
-
-1. **Power the Arduino and Servos:**
-   - Connect the Arduino to your computer or an appropriate power source.
-   - Ensure that the servos have a sufficient power supply.
-
-2. **Monitor the Movement:**
-   - Once the code is uploaded and the Arduino is powered, the robot will start executing the walking cycle.
-   - Observe the movement of the legs and make any necessary adjustments to the parameters or servo connections.
-
-## Adjustments and Fine-Tuning
-
-- Modify the `stepLength`, `footLiftHeight`, and `movementSpeed` parameters in the code to achieve the desired walking motion.
-- Adjust the servo connections if the movement is not as expected.
-
-## Troubleshooting
-
-- Ensure all servo connections are secure and correct.
-- Check that the power supply is adequate for the number of servos used.
-- Verify that the Servo library is properly installed in the Arduino IDE.
-
-## License
-
-This project is open-source and licensed under the MIT License.
-
-## Code
+## Code Python
 
 ### `robot_leg_movement.ino`
 
